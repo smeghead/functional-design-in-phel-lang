@@ -1,0 +1,25 @@
+{
+    "name": "smeghead/functional-design-in-phel-lang",
+    "description": "関数型デザインをphel-langで写経します。",
+    "type": "project",
+    "keywords": [
+        "phel",
+        "functional-design"
+    ],
+    "require": {
+        "php": ">=8.2",
+        "phel-lang/phel-lang": "^0.14"
+    },
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "smeghead",
+            "email": "smeghead7@gmail.com"
+        }
+    ],
+    "scripts": {
+        "test": [
+            "vendor/bin/phel test"
+        ]
+    }
+}
