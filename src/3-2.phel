@@ -1,9 +1,9 @@
-(ns functional-design\chapter3-1)
+(ns functional-design\chapter3-2)
 
 (defn fibs-work [n i fs]
   (if (= i n)
     fs
-    (fibs-work n (inc i) (push fs (apply + (take-last 2 fs))))))
+    (recur n (inc i) (push fs (apply + (take-last 2 fs))))))
 
 (defn fibs [n]
   (cond

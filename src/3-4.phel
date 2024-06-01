@@ -1,0 +1,19 @@
+(ns functional-design\chapter3-4)
+
+# phel に関数のオーバーロードの機能がないため、省略可能引数として定義します。
+(defn ifib [n & [a b]]
+  (cond
+    (and (nil? a) (nil? b)) (cond
+                              (< n 1) nil
+                              (<= n 2) 1
+                              :else (ifib (- n 2) 1 1))
+    :else (loop [n n
+                 a a
+                 b b]
+            (if (= 0 n)
+              b
+              (recur (dec n) b (+ a b))))))
+
+(defn fibs [n]
+  (map ifib (range 1 (inc n))))
+

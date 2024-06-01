@@ -1,6 +1,7 @@
-(ns functional-design\tests\chapter3-1
+(ns functional-design\tests\chapter3-4
   (:require phel\test :refer [deftest is])
-  (:require functional-design\chapter3-1 :as sut))
+  (:require functional-design\chapter3-4 :as sut))
 
 (deftest test1
   (is (= [1 1 2 3 5 8 13 21 34 55 89 144 233 377 610] (sut/fibs 15))))
+
