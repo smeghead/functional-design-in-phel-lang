@@ -1,0 +1,11 @@
+(ns functional-design\chapter6-1)
+
+(defn prime-factors-of [n]
+  (loop [n n
+         divisor 2
+         factors []]
+    (if (> n 1)
+      (if (zero? (% n divisor))
+        (recur (php/intval (/ n divisor)) divisor (push factors divisor))
+        (recur n (inc divisor) factors))
+      factors)))

@@ -1,0 +1,16 @@
+(ns functional-design\tests\chapter6-1
+  (:require phel\test :refer [deftest is])
+  (:require functional-design\chapter6-1 :as sut))
+
+(deftest test1
+  (is (= [] (sut/prime-factors-of 1)))
+  (is (= [2] (sut/prime-factors-of 2)))
+  (is (= [3] (sut/prime-factors-of 3)))
+  (is (= [2 2] (sut/prime-factors-of 4)))
+  (is (= [5] (sut/prime-factors-of 5)))
+  (is (= [2 3] (sut/prime-factors-of 6)))
+  (is (= [7] (sut/prime-factors-of 7)))
+  (is (= [2 2 2] (sut/prime-factors-of 8)))
+  (is (= [3 3] (sut/prime-factors-of 9)))
+  )
+
